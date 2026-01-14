@@ -3,23 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static FinanceTracker_Entity.Models.Enums;
 
 namespace FinanceTracker_Entity.Models
 {
-    public class Transaction
-    {
-        //public Guid TransactionId { get; set; }
-        //public Guid UserId { get; set; }
-        //public Guid AccountId { get; set; }
-        public DateTime Date { get; set; }
-        public TransactionType Type { get; set; }
-        public CategoryName Category { get; set; }
-        public decimal Amount { get; set; }
-        public string Currency { get; set; } = "GEL";
-        public string Description { get; set; } = "";
-        public Guid LinkedTransactionId { get; set; } // Transfer pair
-    }
-
     public class Transaction
     {
         public int Id { get; set; }
@@ -34,9 +21,11 @@ namespace FinanceTracker_Entity.Models
         // many -> one
         public int UserId { get; set; }
         public User User { get; set; }
+        public int AccountId { get; set; }
 
         // many-to-many
-        public List<TransactionCategory> TransactionCategories { get; set; } = new();
+        // public List<TransactionCategory> TransactionCategories { get; set; } = new();
+
     }
 
 }

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static FinanceTracker_Entity.Models.Enums;
 
 namespace FinanceTracker_Entity.Models
 {
     public class Account
     {
-        public class Account
-        {
             public int Id { get; set; }
             public string Name { get; set; } = "";
             public AccountType Type { get; set; }
@@ -20,7 +19,6 @@ namespace FinanceTracker_Entity.Models
 
             public int UserId { get; set; }
             public User User { get; set; }
-        }
 
     }
 }
