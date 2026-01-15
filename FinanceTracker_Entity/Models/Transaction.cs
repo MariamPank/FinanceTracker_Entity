@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinanceTracker_Entity.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +8,9 @@ using static FinanceTracker_Entity.Models.Enums;
 
 namespace FinanceTracker_Entity.Models
 {
-    public class Transaction
+    public class Transaction : BaseEntity
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
         public DateTime Date { get; set; }
         public TransactionType Type { get; set; }
         public CategoryName Category { get; set; }
@@ -22,6 +23,7 @@ namespace FinanceTracker_Entity.Models
         public int UserId { get; set; }
         public User User { get; set; }
         public int AccountId { get; set; }
+        public Account Account { get; set; }
 
         // many-to-many
         // public List<TransactionCategory> TransactionCategories { get; set; } = new();

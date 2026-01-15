@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinanceTracker_Entity.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +8,9 @@ using static FinanceTracker_Entity.Models.Enums;
 
 namespace FinanceTracker_Entity.Models
 {
-    public class Account
+    public class Account : BaseEntity
     {
-            public int Id { get; set; }
+            //public int Id { get; set; }
             public string Name { get; set; } = "";
             public AccountType Type { get; set; }
             public string Currency { get; set; } = "GEL";

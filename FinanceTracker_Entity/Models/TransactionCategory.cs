@@ -13,7 +13,7 @@ namespace FinanceTracker_Entity.Models
         public Transaction Transaction { get; set; }
 
         public int CategoryId { get; set; }
-        public Category Category { get; set; } //????
+        //public Category Category { get; set; } //????
     }
 
 }
